@@ -1,0 +1,480 @@
+
+ body{
+ 	background-color: #fff;
+ }
+ .bg{
+ 	background:linear-gradient(to bottom,#fff 98%,#f1f1f1);
+ }
+ @media screen and (max-width: 400px) {
+
+  .navbar-brand{
+
+   margin-left: -3px;
+
+  }
+
+}
+.nav-item a:hover{
+  color:#a83432!important; 
+  text-decoration: underline;
+}
+
+
+.main{
+	width: 100%;
+	height: 500px;
+	position: absolute;
+
+	top: 10%;
+	
+	background-image: url('https://image.freepik.com/free-photo/pharmaceutical-healthy-eating-healthcare-medical-pills-blue-background-copy-space_36325-1105.jpg');
+	background-size:100% 100%;
+	animation: slider 14s infinite linear;
+
+}
+
+
+@keyframes slider{
+	0%{
+		background-image: url('https://image.freepik.com/free-photo/pharmaceutical-healthy-eating-healthcare-medical-pills-blue-background-copy-space_36325-1105.jpg');
+		
+
+	}
+	35%{
+		background-image:  url('https://demo2.wpopal.com/medicor/wp-content/uploads/2019/05/rev_slidehome6_1.jpg');
+		
+	}
+	70%{
+		background-image: url('https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		
+	}
+}
+    @media screen and (max-width: 500px) {
+
+  .main{
+  	   width: 100%;
+	height: 200px;
+	position: absolute;
+	
+	top: 10%;
+     	background-size:100% 100%;
+
+  }
+
+}
+.outer{
+	position: absolute;
+	top: 0;
+	   width: 100%;
+	height: 500px;
+	background:rgba(0,0,0,0.1); 
+
+}
+ @media screen and (max-width: 500px) {
+
+  .main .outer {
+  	   width: 100%;
+	height: 200px;
+	position: absolute;
+	
+	top: 0;
+     	
+
+  }
+
+}
+.outer h1{
+	color:#fff;
+	font-weight: lighter;
+font-family: 'Libre Baskerville', serif;
+}
+ .carousel-caption{
+ 	
+ 	position: absolute;
+ 	bottom: 40%;
+ 	left:50%;
+
+ }
+
+  @media screen and (max-width: 500px) {
+  	.outer h1{
+	color:#fff;
+	font-weight: lighter;
+font-family: 'Libre Baskerville', serif;
+font-size:20px;
+}
+ .carousel-caption{
+ 	
+ 	position: absolute;
+ 	bottom: -9%;
+ 	left:50%;
+
+ }
+  .outer button{
+  	font-size: 9px;
+  	padding: -3px;
+  	margin: 9px;
+  }
+  }
+  .jmedi{
+  
+
+  	width: 100%;
+  	height: 380px;
+  	margin-top: 600px;
+  	
+  
+    }
+    @media screen and (max-width: 500px){
+    	.fi img{
+    		width: 100%;
+
+    	} 
+    	.jmedi{
+  
+
+   	width: 100%;
+
+  	margin-top: 300px;
+ 
+    }
+
+    }
+      @media screen and (max-width: 1100px) and (min-width: 600px){
+      	.fi img{
+    		width: 100%;
+
+    	} 
+      	.jmedi{
+  
+
+   	width: 100%;
+
+  	margin-top: 700px;
+
+  
+    }
+      }
+
+     .text{
+     	
+     	height: 200px;
+     	width: 50%;
+    	position: absolute;
+     	bottom:50px;
+     }
+     .text p,h4,h3,button{
+     	margin-left: 20px;
+     	color:#fff; 
+     	font-family: 'Libre Baskerville', serif;
+
+
+     } 
+      @media screen and (max-width: 500px){
+      	  .text{
+      	  	
+     	
+     	height: 100px;
+     	width: 50%;
+    	position: absolute;
+     	bottom:50px;
+     }
+     .text p,h4,h3,button{
+     	margin-left: 10px;
+     	color:#fff; 
+     	font-family: 'Libre Baskerville', serif;
+     	font-size: 10px;
+
+
+     } 
+     .text button
+     {
+     	 	font-size: 10px;
+     }
+    
+      }
+   @media screen and (max-width: 1100px) and (min-width: 600px){
+   	    .text{
+      	  	
+  
+     	height: auto;
+     	width: 90%;
+    	position: absolute;
+     	bottom:20px;
+     }
+     .text p,h4,h3,button{
+     	margin-left: 10px;
+     	color:#fff; 
+     	font-family: 'Libre Baskerville', serif;
+     	font-size: 15px;
+
+
+     } 
+     .text button
+     {
+     	 	font-size: 10px;
+     }
+    
+   }
+   .buy{
+  
+   	 width: 100%;
+   	 height: 900px;
+   }
+    .buy .card{
+    	
+    	
+    	border-radius: 4%;
+
+ 
+    } 
+      .buy .card:hover{
+      	box-shadow: 5px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      	border:none;
+
+      }
+       
+
+     .buy .card img{
+     		border-top-radius: 4%;
+     }
+      @media screen and (max-width: 500px) and (min-width: 200px){
+      .heading{
+     
+      	 margin-top:70px;
+
+
+      }
+       .heading h2{
+       	font-size: 20px;
+       }
+        .heading hr{
+        	width:50px;
+
+        }
+      }
+        @media screen and (max-width: 600px) and (min-width: 500px){
+      .heading{
+    
+      	 margin-top:200px;
+     
+
+      }
+       .heading h2{
+       	font-size: 28px;
+       }
+        .heading hr{
+        	width:50px;
+
+        }
+      }
+         @media screen and (max-width: 800px) and (min-width: 700px){
+      .heading{
+    
+      	 margin-top:-80px;
+     
+
+      }
+  }  
+   @media screen and (max-width: 600px) and (min-width: 200px){
+    .buy .card{
+    	
+    	margin-bottom:10px; 
+
+    }
+   }
+        
+         @media screen and (max-width: 600px) and (min-width: 200px){
+    .buy .card button{
+    	
+    	
+    	margin-left: 50px;
+    }
+   }
+
+         @media screen and (max-width: 900px) and (min-width: 600px){
+    .buy .card button{
+    	
+    	margin-left: 3px;
+    }
+   } 
+   @media screen and (max-width: 380px) and (min-width: 370px){
+        .he{
+          
+          margin-top: 1200px;
+
+        }}
+    
+
+      @media screen and (max-width: 360px) and (min-width: 200px){
+      	.he{
+      		
+      		margin-top: 1000px;
+
+      	}
+      		.he h2{
+       	font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 500px) and (min-width: 400px){
+      	.he{
+      	
+      		margin-top: 1200px;
+      	}
+      }
+       @media screen and (max-width: 600px) and (min-width: 500px){
+      	.he{
+      		
+      		margin-top: 1800px;
+      	}
+      
+      }
+        @media screen and (min-width: 700px){
+           .he{
+      		
+      		margin-top: -400px;
+      	}
+        }
+
+        .review .row{
+        	margin-top: 30px;
+
+        }
+       .review .col-md-4{
+       	margin:40px auto;
+       }
+       .review .imgg{
+       	padding: 70px 10px 10px;
+       	background:linear-gradient(rgba(239,239,239,0.5),rgba(239,239,239,0.4),rgba(239,239,239,0.3),rgba(239,239,239,0.2));
+       } 
+
+          .review .imgg:hover{
+          	box-shadow: 5px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+          }
+        .review .imgg img{
+        	top: -60px;
+        	position: absolute;
+        	left: calc(50% - 60px);
+        	border:10px solid #fff;
+        }
+         .review .user{
+         	width: 120px;
+         	height: 120px;
+         	border-radius: 50%;
+         }
+         .review h3{
+         	font-size: 20px;
+         	margin-top: 15px;
+         	color: #000;
+         }
+         .review blockquote{
+         	font-size: 16px;
+         	line-height: 30px;
+         }
+          .review blockquote::before{
+          	content: '\201C';
+          	font-size: 50px;
+          	position: relative;
+          	color:#a83432;
+          	line-height: 20px;
+          	bottom: -15px;
+          	right: 5px;
+          }
+          .review blockquote::after{
+          	content: '\201D';
+          	font-size: 50px;
+          	position: relative;
+          	color:#a83432;
+          	line-height: 20px;
+          	bottom: -15px;
+          	left: 5px;
+          }
+          .ee h6:hover{
+          	color:#a83432;
+          }
+          .ee img:hover{
+          	color:blue;
+          }
+         .sub input{
+          	padding:8px;
+          	width: 380px;
+          	border-top-left-radius: 20px;
+          	border-bottom-left-radius: 20px;
+          	border:none;
+          }
+          .sub button{
+          	border-top-right-radius: 20px;
+          	border-bottom-right-radius: 20px;
+          	padding: 8px;
+          	margin-left: -11px;
+          	margin-top:-5px; 
+          }
+           @media screen and (max-width: 500px) and (min-width: 400px){
+           	.s .container-fluid{
+           		
+           		height: 1000px;
+           	}
+            .sub input{
+          	padding:8px;
+          	width: 280px;
+          	border-top-left-radius: 20px;
+          	border-bottom-left-radius: 20px;
+          	border:none;
+          
+          }
+          .sub button{
+          	border-top-right-radius: 20px;
+          	border-bottom-right-radius: 20px;
+          	padding: 8px;
+          	margin-left: -11px;
+          	margin-top:-4px; 
+          }
+           }
+          @media screen and (max-width: 400px) and (min-width: 200px){
+          	.s .container-fluid{
+           		
+           		height: 1000px;
+           	}
+            .sub input{
+          	padding:8px;
+          	width: 180px;
+          	border-top-left-radius: 20px;
+          	border-bottom-left-radius: 20px;
+          	border:none;
+          	
+          }
+          .sub button{
+          	border-top-right-radius: 20px;
+          	border-bottom-right-radius: 20px;
+          	padding: 8px;
+          	margin-left: -11px;
+          	margin-top:-4px; 
+
+          }
+           }
+           @media screen and (min-width: 600px){
+          	.s .container-fluid{
+           		
+           		height: 500px;
+           	}
+           }
+             @media screen and (max-width: 590px) and (min-width: 510px){
+             		.s .container-fluid{
+           		
+           		    height: 900px;
+           	  }
+             }
+              .footer .col-md-4{
+              	padding:20px;
+              	font-size: 20px;
+              }
+              .footer .col-md-3{
+              	padding:20px;
+              	font-size: 20px;
+              }
+              .footer .col-md-5{
+              	padding:20px;
+              }
+
+  

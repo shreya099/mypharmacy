@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3e0c251e14.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+     <style>
+        .card-3 .card-heading {
+ background:url('https://i.pinimg.com/564x/87/a8/4a/87a84ae00252d97a4b92b53deb90c7e6.jpg') top center/cover no-repeat;
+ }
+    </style>
+</head>
+<body>
+<!--nabvbar start-->
+	<section>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg">
+  <a class="navbar-brand" href="#"><img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifGFrx9GnBbIwXs1M3EMoAJtliArh...Fq9fg4" width="50px" style="margin-left:-9px"> <span style="color:#a83432; ">Pharma</span><span style="color:#8fb385">cy</span>     </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+		{% if user.is_authenticated %}
+		 <li class="nav-item active">
+        <a class="nav-link" href="form/logout">LOGOUT</a>
+      </li>
+		<li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModall0" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </li>
+		{% else %}
+      <li class="nav-item active">
+        <a class="nav-link" href="register">REGISTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">LOGIN</a>
+      </li>
+		{% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="cont">CONTACT</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+	<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780" style="position: relative;top:-90px;">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Login</h2>
+                    <form action="login" method="post">{% csrf_token %}
+
+                         <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="username" name="username">
+                        </div>
+
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Password" name="password">
+                        </div>
+
+
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ {% for message in messages %}
+
+                    <div class="alert alert-success" style="position:relative;top:-600px;">
+
+                        {{message}}
+
+                    </div>
+            {% endfor %}
+
+</body>
+</html>

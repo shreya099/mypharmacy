@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3e0c251e14.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Xanh+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style4.css' %}">
+</head>
+<body>
+<!--nabvbar start-->
+	<section>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg">
+  <a class="navbar-brand" href="#"><img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifGFrx9GnBbIwXs1M3EMoAJtliArh...Fq9fg4" width="50px" style="margin-left:-9px"> <span style="color:#a83432; ">Pharma</span><span style="color:#8fb385">cy</span>     </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+     	{% if user.is_authenticated %}
+		 <li class="nav-item active">
+        <a class="nav-link" href="form/logout">LOGOUT</a>
+      </li>
+		<li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModall0" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </li>
+		{% else %}
+      <li class="nav-item active">
+        <a class="nav-link" href="register">REGISTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login">LOGIN</a>
+      </li>
+		{% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="">CONTACT</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+	<!--nabvbar end-->
+	<!--heading start-->
+	<section class="info">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					 <center>
+			<h4 style="margin-top:90px">Contact Information</h4>
+			<hr style="margin-top:-3px; border:1px solid #a83432;display:inline-block; width:500px; margin-bottom:80px;">
+			</center>
+			</div>
+			</div>
+
+		</div>
+	</section>
+    <!--heading end-->
+      <section>
+      	 <div class="container">
+      		<div class="row">
+      			<div class="col-md-7">
+      				<div>
+            <!-- Google Map Copied Code -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229085.13091125322!2d78.05081117217844!3d26.21439601927144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c5d1792291fb%3A0xff4fb56d65bc3adf!2sGwalior%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1606496052714!5m2!1sen!2sin" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+      			</div>
+      			<div class="col-md-5 text">
+      		        <div class="widget widget_text">
+           		    <p>Address</p>
+           		    <span>Xyz Hospital
+						<br>South Delhi,xyz Road,
+						<br>MK4 9DJ
+				   </span>
+				   <hr>
+           	        </div>
+           	        <div class="widget widget_text">
+           		    <p>Working Hours</p>
+           		    <span>Open Daily
+						<br>from 7:30AM to 8:00PM
+
+				   </span>
+				   <hr>
+           	        </div>
+                     <div class="widget widget_text">
+           	         <p>Contacts</p>
+						<span>	Xyz
+							South Delhi,xyz
+							Road,<br>
+							  MK4 9DJ
+							<br>
+							(832) 123-4567<br>
+							shreya@gmail.com
+							</span>
+						</div>
+
+      			</div>
+
+      		</div>
+      	  </div>
+      </section>
+
+      <!--subs start-->
+<section class="s">
+	<div class="container-fluid" style="margin-top:40px; background:#8fb385">
+     <div class="container">
+	<div class="ee row">
+		<div class="col-md-3" style="margin-top:40px">
+		<img src="https://img.icons8.com/carbon-copy/2x/free-shipping.png" width="43px">
+		<h6>FreeDelivery</h6>
+		<span>Free shipping on all orders</span>
+		</div>
+		<div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/coin-in-hand.png" width="43px">
+		<h6>Money Return</h6>
+		<span>Guarantee under 7 days</span>
+	    </div>
+		<div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/discount.png" width="43px">
+		<h6>Member Discount</h6>
+		<span>On every order above ₹3000</span>
+	    </div>
+	    <div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/online-support.png" width="43px">
+		<h6>Support 24/7</h6>
+		<span>Support online 24 hours a day</span>
+	    </div>
+
+	  </div>
+     </div>
+
+     <div class="sub">
+		<center  style="margin-top:100px">
+		<h2 style="font-family: 'Libre Baskerville', serif;letter-spacing: .3rem;">Subscribe to Our Newsletter</h2>
+		 <p style="letter-spacing: .1rem;">Driving to the store, waiting in line, chasing refills—today’s pharmacy is a pain. <br> We deliver our obsessively researched vitamin directly to your door.</p>
+
+		  <input type="text" placeholder="Your email address*" name="search">
+		  <button class="btn  text-white" style="background:#709568">Subscribe</button>
+
+		</center>
+	</div>
+	</div>
+</section>
+<!--subs end-->
+ <!--footer start-->
+<section class="footer">
+	<div class="container-fluid" style="background:rgba(168,50,50,0.9);">
+		<div class="row">
+			<div class="col-md-5">
+					<div class="widget_text widget widget_custom_html" id="custom_html-2">
+		           	<div  class="textwidget custom-html-widget text-center">
+		           <img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifGFrx9GnBbIwXs1M3EMoAJtliArh...Fq9fg4" width="220px">
+
+		           </div>
+                   </div>
+			</div>
+			<div class="col-md-4">
+					<div class="widget widget_text">
+           		    <p style="color:#d6cece">Quick Links</p>
+           		    <span style="color:#d6cece;">Shipping & Returns
+						<br>Privacy Policy
+						<br>Terms & Conditions
+						<br>Vacancies
+				   </span>
+           	        </div>
+			</div>
+			<div class="col-md-3">
+				<p style="color:#d6cece;">Contacts</p>
+			<span style="color:#d6cece;">
+				  Xyz Hospital
+						<br>South Delhi,xyz Road,
+						<br>MK4 9DJ
+
+				<br>
+				 123-4567
+				shreya@gmail.com
+				</span>
+				 <div class="social-icons text-left">
+           		   		<a href=""><i class="fab fa-linkedin" style="color:#d6cece; font-size: 1em;"></i></a> &nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-facebook-square" style="color:#d6cece; font-size: 1em;"></i></a>&nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-twitter" style="color:#d6cece; font-size: 1em;"></i></a>&nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-instagram" style="color:#d6cece; font-size: 1em;"></i></a>
+           		   	</div>
+
+
+			</div>
+		</div>
+   	</div><!--container fluid end-->
+</section>
+<!--footer end-->
+<!--copyright start-->
+<section>
+    <div  class="container-fluid" style="background-color:rgba(168,52,50,1); padding-top: 10px; padding-bottom: 10px;">
+    	<div class="row" style="display: block;">
+    		<div class="text-center">
+
+    		<p class="copyright-text" style=" font-size:14px;color: white;font-weight: lighter;margin-top: 0px;
+
+    margin-bottom: 0px;">
+            	PRIVACY POLICY | TERMS AND CONDITIONS | BLOG
+            	<br>
+            	COPYRIGHT © 2019
+            	<a  style="color: white;text-decoration: none;">SHREYA :)</a>
+            </p>
+
+    		</div>
+
+    	</div>
+    </div>
+</section>
+<!--copyright end-->
+ <!--modal-->
+				    <div class="modal fade" id="exampleModall0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Empty cart</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+
+
+						<img src="https://thumbs.gfycat.com/LonelyDazzlingBoar-size_restricted.gif" width="300px">
+
+				      </div>
+
+					    </div>
+					  </div>
+					</div>
+
+					<!--modal end-->
+
+</body>
+</html>

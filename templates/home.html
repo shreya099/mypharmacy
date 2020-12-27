@@ -1,0 +1,370 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3e0c251e14.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Xanh+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ 
+<style type="text/css">
+#l{
+
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #fff url('https://media2.giphy.com/media/xThta8ME4m4lLHy0Ba/giphy.gif?cid=ecf05e47bf21b87365af1b6964196e04010c823f86f2776b&rid=giphy.gif') no-repeat center;
+
+	z-index: 999999;
+	bottom:0;
+	
+	
+}
+@media screen and (max-width: 400px){
+	#l{
+
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #fff url('https://media2.giphy.com/media/xThta8ME4m4lLHy0Ba/giphy.gif?cid=ecf05e47bf21b87365af1b6964196e04010c823f86f2776b&rid=giphy.gif') no-repeat center;
+   background-size: 70% 70%;
+	z-index: 999999;
+	bottom:0;
+	
+	
+}
+}
+</style>
+<script> 
+	$(document).ready(function(){
+		$('#mymodel').modal('show');	
+	});
+ </script>
+</head>
+<body onload="myFunction()">
+	<div id="l">
+	
+    </div>
+
+	<!--nabvbar start-->
+	<section>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg">
+  <a class="navbar-brand" href="#"><img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifGFrx9GnBbIwXs1M3EMoAJtliArh...Fq9fg4" width="50px" style="margin-left:-9px"> <span style="color:#a83432; ">Pharma</span><span style="color:#8fb385">cy</span>     </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+		{% if user.is_authenticated %}
+		 <li class="nav-item active">
+        <a class="nav-link" href="form/logout">LOGOUT</a>
+      </li>
+		<li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModall0" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </li>
+		{% else %}
+      <li class="nav-item active">
+        <a class="nav-link" href="form/register">REGISTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="form/login">LOGIN</a>
+      </li>
+		{% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="form/cont">CONTACT</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+		<div class="main">
+			<div class="outer">
+				<div class="carousel-caption">
+				<h1>Everything you need <br>for your health
+					<br><span></span></h1>
+					<button type="button" class="btn btn-light">Shop now</button>
+					</div>
+			</div>
+			
+			
+		</div>
+	</section>	
+				   
+<!--nabvbar end-->
+<!--shop start-->
+<section>
+	<div class="container jmedi">
+		<div class="row">
+			{% for m in me %}
+
+			<div class="col-md-6 col-sm-12 fi">
+		     <a href=""><img src="{{m.img.url}}" width="500px"></a>
+		   	  	 <div class="text">
+		   	 	<p >Only this week</p>
+		   	 	<h4>30% Off</h4>
+		   	 	<h3 style="	font-weight:lighter;">Shopping Pass</h3>
+		   	 	<p >when you get an immunization</p>
+		 	<button type="button" class="btn btn-light">Shop now</button>
+		   	 </div>
+			 </div>
+
+ {% endfor %}
+
+		</div>
+	
+	</div>
+</section>
+<!--shop end-->
+<!--products start-->
+<section>
+	<div style=" margin-bottom:40px" class="heading">
+		<center>
+		<h2 style="font-family: 'Libre Baskerville', serif;">Featured products</h2>
+		<hr style="margin-top:-3px; border:1px solid #a83432;display:inline-block; width:300px">
+		</center>
+	</div>
+
+	<div class="container buy">
+
+		<div class="row">
+			{% for med in medi %}
+			<div class="col-md-3 col-sm-6">
+
+			<div class="card">
+				  <img src="{{med.img.url}}" class="card-img-top" alt="...">
+				 
+				  <div class="card-body">
+
+				    <h6 class="card-text">{{med.name}}</h6>
+				    <h6 style="float:left;padding:8px; margin-right:40px">rs{{med.rs}}</h6>
+					  <a href="form/login"><button type="button" class="btn btn-info">Buy now</button></a>
+                  </div>
+            </div> 
+		    </div>
+		
+{% endfor %}
+		</div>
+
+        <div style="margin-top:30px">
+			<center>  <a href="form/login"><button type="button" class="btn btn-outline-info" style="padding:8px 12px;border-radius:20px">All Products</button></a></center>
+		 </div>
+	</div>	
+</section>
+<!--products end-->
+<!--happy start-->
+<section>
+	<div class="he">
+		<center>
+		<h2 style="font-family: 'Libre Baskerville', serif;">Happy Customers</h2>
+		<hr style="margin-top:-3px; border:1px solid #a83432;display:inline-block; width:300px">
+		</center>
+	</div>
+      <section class="review">
+	  <div style="" class=" container why">
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<div class="imgg">
+					<img src="https://www.flaticon.com/svg/static/icons/svg/3048/3048157.svg" class="user">
+					<blockquote>I have gotten 50 times the value from this site❤.The very best. Just what i was looking for, keep up the good work guyz!.
+					</blockquote>
+					<h3>Shreya</h3><span style="padding-left:20px">Student</span>
+				</div>
+			</div>
+          <div class="col-md-4  text-center">
+				<div class="imgg">
+					<img src="https://www.flaticon.com/svg/static/icons/svg/3048/3048122.svg" class="user">
+					<blockquote>I have gotten 50 times the value from this site❤.The very best. Just what i was looking for, keep up the good work guyz!.</blockquote>
+					<h3>John</h3><span style="padding-left:20px">Student</span>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="imgg">
+					<img src="https://www.flaticon.com/svg/static/icons/svg/3048/3048200.svg" class="user">
+					<blockquote>I have gotten 50 times the value from this site❤.The very best. Just what i was looking for, keep up the good work guyz!.</blockquote>
+					<h3>Shreya</h3><span style="padding-left:20px">Student</span>
+				</div>
+
+			</div>
+			
+		</div>
+
+		
+	 </div>
+
+	</section>
+</section>
+<!--happy end-->
+<!--subs start-->
+<section class="s">
+	<div class="container-fluid" style="margin-top:40px; background:#8fb385">
+     <div class="container">
+	<div class="ee row">
+		<div class="col-md-3" style="margin-top:40px">
+		<img src="https://img.icons8.com/carbon-copy/2x/free-shipping.png" width="43px">
+		<h6>FreeDelivery</h6>
+		<span>Free shipping on all orders</span>
+		</div>
+		<div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/coin-in-hand.png" width="43px">
+		<h6>Money Return</h6>
+		<span>Guarantee under 7 days</span>
+	    </div>
+		<div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/discount.png" width="43px">
+		<h6>Member Discount</h6>
+		<span>On every order above ₹3000</span>
+	    </div>
+	    <div class="col-md-3"  style="margin-top:40px">
+		<img src="https://img.icons8.com/wired/2x/online-support.png" width="43px">
+		<h6>Support 24/7</h6>
+		<span>Support online 24 hours a day</span>
+	    </div>
+
+	  </div>
+     </div>
+
+     <div class="sub">
+		<center  style="margin-top:100px">
+		<h2 style="font-family: 'Libre Baskerville', serif;letter-spacing: .3rem;">Subscribe to Our Newsletter</h2>
+		 <p style="letter-spacing: .1rem;">Driving to the store, waiting in line, chasing refills—today’s pharmacy is a pain. <br> We deliver our obsessively researched vitamin directly to your door.</p>
+		 
+		  <input type="text" placeholder="Your email address*" name="search">
+		  <button class="btn  text-white" style="background:#709568">Subscribe</button>
+   
+		</center>
+	</div>
+	</div>	
+</section>
+<!--subs end-->
+<!--footer start-->
+<section class="footer">
+	<div class="container-fluid" style="background:rgba(168,50,50,0.9);">
+		<div class="row">
+			<div class="col-md-5">
+					<div class="widget_text widget widget_custom_html" id="custom_html-2">
+		           	<div  class="textwidget custom-html-widget text-center">
+		           <img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifGFrx9GnBbIwXs1M3EMoAJtliArh...Fq9fg4" width="220px">
+
+		           </div>
+                   </div>
+			</div>
+			<div class="col-md-4">
+					<div class="widget widget_text">
+           		    <p style="color:#d6cece">Quick Links</p>
+           		    <span style="color:#d6cece;">Shipping & Returns
+						<br>Privacy Policy
+						<br>Terms & Conditions
+						<br>Vacancies
+				   </span>
+           	        </div>
+			</div>
+			<div class="col-md-3">
+				<p style="color:#d6cece;">Contacts</p>
+			<span style="color:#d6cece;">
+				  Xyz Hospital
+						<br>South Delhi,xyz Road,
+						<br>MK4 9DJ
+
+				<br>
+				123-4567
+				shreya@gmail.com
+				</span>
+				 <div class="social-icons text-left">
+           		   		<a href=""><i class="fab fa-linkedin" style="color:#d6cece; font-size: 1em;"></i></a> &nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-facebook-square" style="color:#d6cece; font-size: 1em;"></i></a>&nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-twitter" style="color:#d6cece; font-size: 1em;"></i></a>&nbsp;&nbsp;
+           		   		<a href=""><i class="fab fa-instagram" style="color:#d6cece; font-size: 1em;"></i></a>
+           		   	</div>
+
+
+			</div>
+		</div>
+   	</div><!--container fluid end-->
+</section>
+<!--footer end-->
+<!--copyright start-->
+<section>
+    <div  class="container-fluid" style="background-color:rgba(168,52,50,1); padding-top: 10px; padding-bottom: 10px;">
+    	<div class="row" style="display: block;">
+    		<div class="text-center">
+    			
+    		<p class="copyright-text" style=" font-size:14px;color: white;font-weight: lighter;margin-top: 0px;
+
+    margin-bottom: 0px;">
+            	PRIVACY POLICY | TERMS AND CONDITIONS | BLOG
+            	<br>
+            	COPYRIGHT © 2019 
+            	<a  style="color: white;text-decoration: none;">SHREYA :)</a>
+            </p>
+       
+    		</div>
+    		
+    	</div>
+    </div>
+</section>
+<!--copyright end-->
+<!--modal-->
+				    <div class="modal fade" id="exampleModall0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Empty cart</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				         
+				         
+						<img src="https://thumbs.gfycat.com/LonelyDazzlingBoar-size_restricted.gif" width="300px">
+				         
+				      </div>
+     
+					    </div>
+					  </div>
+					</div>
+
+					<!--modal end-->
+			<!--popup-->
+			<div class="modal fade" id="mymodel">
+			 <div class="modal-dialog"> 
+			 	<div class="modal-content"> 
+			 		<div class="modal-header lg" style="background-color:rgba(168,52,50,0.5)">
+			 		 <h5 class="modal-title" >PRICE DROP ALERT</h5>
+			 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			 		     <span aria-hidden="true">&times;</span>
+			 		   </button> 
+			 		</div>
+			 		<div class="modal-body">
+			 		 <h3>PRICE DROP ALERT</h3>
+			 		  <ul>
+			 		  	<li><a style="color: black;" href="" target="_blank" rel="noopener noreferrer">
+			 		  		<img class="alignnone size-full wp-image-2179" src="" alt="" width="30" height="15">GET FLAT <strong>50% OFF</strong> ON ALL ORDERS ABOVE RS.1899<br>
+			 		  	</a></li>
+			 		  </ul> ... 
+			 		</div> 
+			 	</div> 
+			 </div>
+			</div>
+					<script type="text/javascript">  
+					 var preloader=document.getElementById('l');
+                      function myFunction(){
+	                  preloader.style.display= 'none';  }
+	                 </script>
+</body>
+</html>
